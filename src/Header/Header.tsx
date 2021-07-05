@@ -1,6 +1,7 @@
+import AppBar from "@material-ui/core/AppBar";
 import React from "react";
 
 const Header = () => {
-    return <div></div>;
+    return <AppBar></AppBar>>;
 };
 export default Header;
