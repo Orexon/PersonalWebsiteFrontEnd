@@ -7,12 +7,10 @@ import { theme } from "./HelperComponents/MuiTheme";
 import { CssBaseline } from "@material-ui/core";
 
 ReactDOM.render(
-    <React.StrictMode>
-        <MuiThemeProvider theme={theme}>
-            <CssBaseline />
-            {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-            <App />
-        </MuiThemeProvider>
-    </React.StrictMode>,
+    <MuiThemeProvider theme={theme}>
+        <CssBaseline />
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <App />
+    </MuiThemeProvider>,
     document.getElementById("root")
 );
