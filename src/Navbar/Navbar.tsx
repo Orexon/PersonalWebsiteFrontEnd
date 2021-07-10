@@ -21,6 +21,12 @@ const useStyles = makeStyles((theme) => ({
     text: {
         color: "white",
     },
+    barsIcon: {
+        color: "white",
+        maxWidth: 36,
+        maxHeight: 36,
+        fontSize: 32,
+    },
     listItem: {
         paddingLeft: 8,
         paddingRight: 8,
@@ -32,22 +38,6 @@ const useStyles = makeStyles((theme) => ({
         "&:focus": {
             borderBottom: "2px solid white",
         },
-        [theme.breakpoints.down(1365)]: {
-            paddingBottom: 4,
-            paddingTop: 4,
-        },
-        [theme.breakpoints.down(1024)]: {
-            paddingBottom: 3.5,
-            paddingTop: 3.5,
-        },
-        [theme.breakpoints.down(768)]: {
-            paddingBottom: 3,
-            paddingTop: 3,
-        },
-        [theme.breakpoints.down(600)]: {
-            paddingBottom: 2,
-            paddingTop: 2,
-        },
     },
 }));
 
@@ -58,9 +48,9 @@ interface IProps {
 const Navbar = (props: IProps) => {
     const classes = useStyles();
     return (
-        <AppBar position="static" className="appBar">
+        <AppBar position="static" color="transparent" className="appBar">
             <Toolbar className="appBar">
-                <Container maxWidth="xl" className="appBar">
+                <Container maxWidth={false} className="appBar">
                     <List component="nav" className="appBar no-padding">
                         <Grid
                             container
@@ -72,7 +62,7 @@ const Navbar = (props: IProps) => {
                                 <ListItem
                                     component={NavLink}
                                     to="/"
-                                    className="appBar no-padding"
+                                    className="appBar no-padding logoImg"
                                 >
                                     <img
                                         src="../Images/GooWhite.svg"
@@ -90,16 +80,16 @@ const Navbar = (props: IProps) => {
                                     <Hidden smUp>
                                         <Grid item sm>
                                             <IconButton
-                                                edge="end"
-                                                color="inherit"
-                                                className="no-padding"
+                                                className={classes.barsIcon}
                                                 onClick={(e) =>
                                                     props.toggleSidebarModal(
                                                         !props.openSidebar
                                                     )
                                                 }
                                             >
-                                                <MenuIcon />
+                                                <MenuIcon
+                                                    className={classes.barsIcon}
+                                                />
                                             </IconButton>
                                         </Grid>
                                     </Hidden>

@@ -3,6 +3,7 @@ import { unstable_createMuiStrictModeTheme as createMuiTheme } from "@material-u
 
 export const theme = createMuiTheme({
     typography: {
+        fontFamily: ['"Encode Sans Expanded"', "Open Sans"].join(","),
         button: {
             textTransform: "none",
         },

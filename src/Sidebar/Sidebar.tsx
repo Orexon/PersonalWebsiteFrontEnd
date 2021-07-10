@@ -27,8 +27,14 @@ interface IProps {
 }
 
 const useStyles = makeStyles({
+    addPad: {
+        paddingRight: 16,
+        paddingLeft: 16,
+    },
     btnColor: {
         color: "#ffffff",
+        paddingRight: 12,
+        paddingTop: 12,
     },
     IconSize: {
         fontSize: "40px",
@@ -71,7 +77,7 @@ const Sidebar = (props: IProps) => {
             TransitionComponent={Transition}
         >
             <Grid container justify="flex-end">
-                <Grid item>
+                <Grid item className={classes.addPad}>
                     <IconButton
                         onClick={handleClose}
                         aria-label="close"
@@ -82,11 +88,12 @@ const Sidebar = (props: IProps) => {
                 </Grid>
             </Grid>
             <Grid
-                container
+                item
                 xs={12}
                 sm={12}
                 justify="center"
                 alignItems="center"
+                container
             >
                 <List>
                     <ListItem
@@ -96,6 +103,7 @@ const Sidebar = (props: IProps) => {
                         smooth={true}
                         to="about"
                         className={classes.listItemC}
+                        onClick={handleClose}
                     >
                         <ListItemText
                             primary="About"
@@ -108,6 +116,7 @@ const Sidebar = (props: IProps) => {
                         smooth={true}
                         to="experience"
                         className={classes.listItemC}
+                        onClick={handleClose}
                     >
                         <ListItemText
                             primary="Experience"
@@ -120,6 +129,7 @@ const Sidebar = (props: IProps) => {
                         smooth={true}
                         to="education"
                         className={classes.listItemC}
+                        onClick={handleClose}
                     >
                         <ListItemText
                             primary="Education"
@@ -132,6 +142,7 @@ const Sidebar = (props: IProps) => {
                         smooth={true}
                         to="skills"
                         className={classes.listItemC}
+                        onClick={handleClose}
                     >
                         <ListItemText
                             primary="Skills"
@@ -144,6 +155,7 @@ const Sidebar = (props: IProps) => {
                         smooth={true}
                         to="interests"
                         className={classes.listItemC}
+                        onClick={handleClose}
                     >
                         <ListItemText
                             primary="Interests"
