@@ -1,11 +1,5 @@
-import {
-    Button,
-    Container,
-    Grid,
-    makeStyles,
-    Typography,
-} from "@material-ui/core";
-import React, { useRef } from "react";
+import { Button, Grid, makeStyles, Typography } from "@material-ui/core";
+import React, { useRef, useState } from "react";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import Video from "../videos/video2.mp4";
@@ -45,6 +39,8 @@ const useStyles = makeStyles({
         color: "white",
         textAlign: "center",
         fontWeight: 600,
+        transition: "0.6s all ease",
+        animation: "fadeIn 1s",
         "@media only screen and (min-width:1312px)": {
             fontSize: "3.5em",
             transition: "1.0s all ease",
@@ -73,6 +69,7 @@ const useStyles = makeStyles({
         textAlign: "center",
         fontWeight: 600,
         paddingTop: 16,
+        animation: "fadeIn linear 1s",
         "@media only screen and (min-width:1312px)": {
             fontSize: "1.5em",
             transition: "1.0s all ease",
@@ -97,6 +94,7 @@ const useStyles = makeStyles({
     },
     btnContainer: {
         transition: "0.6s all ease",
+        animation: "fadeIn linear 1s",
     },
     btnOuter: {
         paddingTop: 20,
@@ -112,6 +110,26 @@ const useStyles = makeStyles({
             borderColor: "#FFA500",
         },
     },
+    mainLogo: {
+        cursor: "pointer",
+        transition: "ease-in-out 1.5s",
+        "@media only screen and (min-width:1312px)": {
+            maxWidth: 550,
+            transition: "ease-in-out 1.5s",
+        },
+        "@media only screen and (max-width:1312px)": {
+            maxWidth: 400,
+            transition: "ease-in-out 1.5s",
+        },
+        "@media (max-width:1024px)": {
+            maxWidth: 320,
+            transition: "ease-in-out 1.5s",
+        },
+        "@media (max-width:600px)": {
+            maxWidth: 250,
+            transition: "ease-in-out 1.5s",
+        },
+    },
 });
 
 const Home = () => {
@@ -119,6 +137,11 @@ const Home = () => {
     const video = useRef<HTMLVideoElement>();
     const playVideo = (event: any) => {
         video.current && video.current.play();
+    };
+
+    const [logoVisible, setLogoVisible] = useState(false);
+    const toggleLogoVisibility = () => {
+        setLogoVisible(!logoVisible);
     };
 
     return (
@@ -134,7 +157,7 @@ const Home = () => {
             </div>
 
             <Grid
-                container
+                item
                 justify="center"
                 alignItems="center"
                 className={classes.homeContent}
@@ -143,6 +166,7 @@ const Home = () => {
                 md={8}
                 sm={10}
                 xs={10}
+                container
             >
                 <Grid
                     item
@@ -155,14 +179,37 @@ const Home = () => {
                     alignItems="center"
                     container
                 >
-                    <Grid item xl={10} lg={10} md={12} sm={12} xs={12}>
-                        <Typography
-                            variant="h2"
-                            id="HeadingTxt"
-                            className={classes.homeTextheading}
-                        >
-                            Mindaugas Kriauciunas
-                        </Typography>
+                    <Grid
+                        item
+                        xl={10}
+                        lg={10}
+                        md={12}
+                        sm={12}
+                        xs={12}
+                        onClick={toggleLogoVisibility}
+                    >
+                        {logoVisible ? (
+                            <Grid
+                                container
+                                justify="center"
+                                alignItems="center"
+                                className="fadeInAnimation"
+                            >
+                                <img
+                                    className={classes.mainLogo}
+                                    src="../Images/GooWhite.svg"
+                                    alt="Logo"
+                                />
+                            </Grid>
+                        ) : (
+                            <Typography
+                                variant="h2"
+                                id="HeadingTxt"
+                                className={classes.homeTextheading}
+                            >
+                                Mindaugas Kriaučiūnas
+                            </Typography>
+                        )}
                     </Grid>
                     <Grid item xl={10} lg={9} md={10} sm={10} xs={12}>
                         <Typography
@@ -179,7 +226,7 @@ const Home = () => {
                 </Grid>
                 <Grid
                     item
-                    xl={2}
+                    xl={10}
                     lg={10}
                     md={12}
                     sm={12}
@@ -190,7 +237,7 @@ const Home = () => {
                 >
                     <Grid
                         item
-                        xl={3}
+                        xl={10}
                         lg={10}
                         md={12}
                         sm={8}
