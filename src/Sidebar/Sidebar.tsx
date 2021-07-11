@@ -43,10 +43,10 @@ const useStyles = makeStyles({
         fontSize: "1.6em",
         color: "white",
         "&:hover": {
-            color: "#0000CD",
+            color: "#FFA500",
         },
         "&:focus": {
-            color: "#00BFFF",
+            color: "#FFA500",
         },
     },
     listItemC: {

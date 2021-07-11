@@ -20,6 +20,9 @@ import "./Navbar.css";
 const useStyles = makeStyles((theme) => ({
     text: {
         color: "white",
+        "&:hover": {
+            color: "#FFA500",
+        },
     },
     barsIcon: {
         color: "white",
@@ -33,10 +36,13 @@ const useStyles = makeStyles((theme) => ({
         paddingBottom: 5,
         paddingTop: 5,
         "&:hover": {
-            borderBottom: "2px solid white",
+            borderBottom: "2px solid #FFA500",
         },
         "&:focus": {
-            borderBottom: "2px solid white",
+            borderBottom: "2px solid #FFA500",
+        },
+        "&:active": {
+            borderBottom: "2px solid #FFA500",
         },
     },
 }));
