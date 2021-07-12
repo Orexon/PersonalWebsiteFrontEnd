@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import {
     Container,
     Grid,
@@ -11,18 +10,22 @@ import {
     Toolbar,
 } from "@material-ui/core";
 import AppBar from "@material-ui/core/AppBar";
-import { Link as RouterDom, NavLink } from "react-router-dom";
-//RouterDom must not be removed even if not used,without it component doesn't recognize "activeClassName"
+import { Link as NavLink } from "react-router-dom";
 import { Link as LinkS } from "react-scroll";
 import MenuIcon from "@material-ui/icons/Menu";
+import { animateScroll as scroll } from "react-scroll";
 import "./Navbar.css";
+import { useEffect, useState } from "react";
 
 const useStyles = makeStyles((theme) => ({
+    navBar: {
+        height: "45px",
+        marginTop: "-45px",
+        transition: "0.5s all ease",
+        zIndex: 10,
+    },
     text: {
         color: "white",
-        "&:hover": {
-            color: "#FFA500",
-        },
     },
     barsIcon: {
         color: "white",
@@ -31,18 +34,28 @@ const useStyles = makeStyles((theme) => ({
         fontSize: 32,
     },
     listItem: {
-        paddingLeft: 8,
-        paddingRight: 8,
-        paddingBottom: 5,
-        paddingTop: 5,
+        // paddingLeft: 8,
+        // paddingRight: 8,
+        // paddingBottom: 5,
+        // paddingTop: 5,
+        // "&:hover": {
+        //     borderBottom: "2px solid #FFA500",
+        // },
+        // "&:focus": {
+        //     borderBottom: "2px solid #FFA500",
+        // },
+        // "&:active": {
+        //     borderBottom: "2px solid #FFA500",
+        // },
+    },
+    linkS: {
+        paddingTop: 10,
+        paddingBottom: 10,
+        fontSize: "1rem",
+        color: "#FFFFFF",
+        cursor: "pointer",
         "&:hover": {
-            borderBottom: "2px solid #FFA500",
-        },
-        "&:focus": {
-            borderBottom: "2px solid #FFA500",
-        },
-        "&:active": {
-            borderBottom: "2px solid #FFA500",
+            color: "#FFA500",
         },
     },
 }));
@@ -53,8 +66,32 @@ interface IProps {
 }
 const Navbar = (props: IProps) => {
     const classes = useStyles();
+    const [scrollNav, setScrollNav] = useState(false);
+
+    const changeNav = () => {
+        if (window.scrollY >= 45) {
+            setScrollNav(true);
+        } else {
+            setScrollNav(false);
+        }
+    };
+
+    useEffect(() => {
+        window.addEventListener("scroll", changeNav);
+    }, []);
+
+    const toggleHome = () => {
+        scroll.scrollToTop();
+    };
+
     return (
-        <AppBar position="static" color="transparent" className="appBar">
+        <AppBar
+            position="sticky"
+            style={{
+                backgroundColor: scrollNav ? "#000" : "transparent",
+            }}
+            className={classes.navBar}
+        >
             <Toolbar className="appBar">
                 <Container maxWidth={false} className="appBar">
                     <List component="nav" className="appBar no-padding">
@@ -68,6 +105,7 @@ const Navbar = (props: IProps) => {
                                 <ListItem
                                     component={NavLink}
                                     to="/"
+                                    onClick={toggleHome}
                                     className="appBar no-padding logoImg"
                                 >
                                     <img
@@ -100,64 +138,74 @@ const Navbar = (props: IProps) => {
                                         </Grid>
                                     </Hidden>
                                     <Hidden xsDown>
-                                        <Grid item>
+                                        <Grid item className="activeBorder">
                                             <ListItem
                                                 component={LinkS}
                                                 to="about"
-                                                className={classes.listItem}
+                                                smooth={true}
+                                                duration={500}
+                                                spy={true}
+                                                offset={-45}
+                                                className={classes.linkS}
+                                                activeClass="active"
                                             >
-                                                <ListItemText
-                                                    primary="About"
-                                                    className={classes.text}
-                                                />
+                                                About
                                             </ListItem>
                                         </Grid>
-                                        <Grid item>
+                                        <Grid item className="activeBorder">
                                             <ListItem
                                                 component={LinkS}
                                                 to="experience"
-                                                className={classes.listItem}
+                                                smooth={true}
+                                                duration={500}
+                                                spy={true}
+                                                offset={-45}
+                                                className={classes.linkS}
+                                                activeClass="active"
                                             >
-                                                <ListItemText
-                                                    className={classes.text}
-                                                    primary="Experience"
-                                                />
+                                                Experience
                                             </ListItem>
                                         </Grid>
-                                        <Grid item>
+                                        <Grid item className="activeBorder">
                                             <ListItem
                                                 component={LinkS}
                                                 to="education"
-                                                className={classes.listItem}
+                                                smooth={true}
+                                                duration={500}
+                                                spy={true}
+                                                offset={-45}
+                                                activeClass="active"
+                                                className={classes.linkS}
                                             >
-                                                <ListItemText
-                                                    primary="Education"
-                                                    className={classes.text}
-                                                />
+                                                Education
                                             </ListItem>
                                         </Grid>
-                                        <Grid item>
+                                        <Grid item className="activeBorder">
                                             <ListItem
                                                 component={LinkS}
                                                 to="skills"
-                                                className={classes.listItem}
+                                                smooth={true}
+                                                duration={500}
+                                                spy={true}
+                                                offset={-45}
+                                                activeClass="active"
+                                                className={classes.linkS}
                                             >
-                                                <ListItemText
-                                                    primary="Skills"
-                                                    className={classes.text}
-                                                />
+                                                Skills
                                             </ListItem>
                                         </Grid>
-                                        <Grid item>
+                                        <Grid item className="activeBorder">
                                             <ListItem
                                                 component={LinkS}
                                                 to="interests"
-                                                className={classes.listItem}
+                                                smooth={true}
+                                                duration={500}
+                                                spy={true}
+                                                offset={-45}
+                                                activeClass="active"
+                                                className={classes.linkS}
                                             >
-                                                <ListItemText
-                                                    primary="Interests"
-                                                    className={classes.text}
-                                                />
+                                                Interests
                                             </ListItem>
                                         </Grid>
                                     </Hidden>

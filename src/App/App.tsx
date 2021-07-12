@@ -1,27 +1,12 @@
-import React, { useState } from "react";
-import { BrowserRouter } from "react-router-dom";
-import Footer from "../Footer/Footer";
-import Header from "../Header/Header";
-import Main from "../Main/Main";
-
-interface IProps {
-    toggleSidebarModal: (open: boolean) => void;
-    openSidebar: boolean;
-}
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import Home from "../Home/Home";
 
 const App = () => {
-    const [openSidebar, setOpenSidebar] = useState(false);
-    const toggleSidebarModal = () => {
-        setOpenSidebar(!openSidebar);
-    };
     return (
         <BrowserRouter>
-            <Header
-                openSidebar={openSidebar}
-                toggleSidebarModal={toggleSidebarModal}
-            />
-            <Main />
-            <Footer />
+            <Switch>
+                <Route path="/" component={Home} exact />
+            </Switch>
         </BrowserRouter>
     );
 };
