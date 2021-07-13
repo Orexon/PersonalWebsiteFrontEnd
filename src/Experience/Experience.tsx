@@ -1,14 +1,15 @@
 import { Grid, makeStyles, Typography } from "@material-ui/core";
 import { RecordOne, RecordTwo } from "./data";
 import Particles from "react-particles-js";
-import Records from "./Records";
+import Records from "../HelperComponents/Records";
 
 const useStyles = makeStyles({
     experience: {
         position: "relative",
         overflow: "hidden",
         background: "#0c0c0c",
-        height: "100vh",
+        minHeight: "100vh",
+        height: "100%",
         paddingTop: "10vh",
         paddingBottom: "10vh",
         transition: "1.0s all ease",

@@ -2,6 +2,7 @@ import { useState } from "react";
 import About from "../About/About";
 import Education from "../Education/Education";
 import Experience from "../Experience/Experience";
+import { educationImg } from "../HelperComponents/imgData";
 import ScrollToTop from "../HelperComponents/ScrollToTop";
 import Interests from "../Interests/Interests";
 import Navbar from "../Navbar/Navbar";
