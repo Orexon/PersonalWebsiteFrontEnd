@@ -12,6 +12,17 @@
     text-shadow: 2px 2px 0 black, -1px -1px 0 #000, 1px -1px 0 #000,
         -1px 1px 0 #000, 1px 1px 0 #000;
 }
+
+@media (max-width: 600px) {
+    #TxtTxt {
+        -webkit-text-stroke: 1px transparent !important;
+        color: white !important;
+        text-shadow: 1px 1px 0 transparent, -1px -1px 0 transparent,
+            1px -1px 0 transparent, -1px 1px 0 transparent,
+            1px 1px 0 transparent;
+    }
+}
+
 .fadeInAnimation {
     animation: fadeIn 3s;
     -webkit-animation: fadeIn 3s;

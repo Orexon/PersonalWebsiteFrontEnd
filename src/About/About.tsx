@@ -93,10 +93,14 @@ const useStyles = makeStyles({
         //     paddingRight: 25,
         // },
         "@media (max-width:600px)": {
-            fontSize: "1.2rem",
+            fontSize: "1rem",
             transition: "1.0s all ease",
             paddingRight: 5,
             paddingLeft: 5,
+        },
+        "@media (max-width:400px)": {
+            fontSize: "0.8rem",
+            transition: "1.0s all ease",
         },
     },
     btnContainer: {
@@ -134,6 +138,10 @@ const useStyles = makeStyles({
         },
         "@media (max-width:600px)": {
             maxWidth: 250,
+            transition: "ease-in-out 1.5s",
+        },
+        "@media (max-width:400px)": {
+            maxWidth: 200,
             transition: "ease-in-out 1.5s",
         },
     },

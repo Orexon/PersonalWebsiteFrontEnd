@@ -5,7 +5,6 @@ import {
     IconButton,
     List,
     ListItem,
-    ListItemText,
     makeStyles,
     Toolbar,
 } from "@material-ui/core";
@@ -33,24 +32,11 @@ const useStyles = makeStyles((theme) => ({
         maxHeight: 36,
         fontSize: 32,
     },
-    listItem: {
-        // paddingLeft: 8,
-        // paddingRight: 8,
-        // paddingBottom: 5,
-        // paddingTop: 5,
-        // "&:hover": {
-        //     borderBottom: "2px solid #FFA500",
-        // },
-        // "&:focus": {
-        //     borderBottom: "2px solid #FFA500",
-        // },
-        // "&:active": {
-        //     borderBottom: "2px solid #FFA500",
-        // },
-    },
     linkS: {
         paddingTop: 10,
         paddingBottom: 10,
+        paddingRight: 8,
+        paddingLeft: 8,
         fontSize: "1rem",
         color: "#FFFFFF",
         cursor: "pointer",
