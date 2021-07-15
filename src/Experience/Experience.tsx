@@ -1,30 +1,40 @@
-import { Grid, makeStyles, Typography } from "@material-ui/core";
+import { Grid, makeStyles, Typography, Divider } from "@material-ui/core";
 import { RecordOne, RecordTwo } from "./data";
 import Particles from "react-particles-js";
 import Records from "../HelperComponents/Records";
+import ImageS from "../HelperComponents/Image";
+import { experieceImg } from "../HelperComponents/imgData";
 
 const useStyles = makeStyles({
     experience: {
         position: "relative",
         overflow: "hidden",
-        background: "#0c0c0c",
+        background: "#ffffff",
         minHeight: "100vh",
         height: "100%",
         paddingTop: "10vh",
         paddingBottom: "10vh",
         transition: "1.0s all ease",
         "@media (max-width:900px)": {
+            minHeight: "950px",
             paddingTop: "5vh",
             paddingBottom: "5vh",
         },
         "@media (max-width:600px)": {
-            minHeight: "600px",
+            minHeight: "900px",
             paddingTop: "calc(3vh + 45px)",
             paddingBottom: "3vh",
             paddingRight: "7vw",
             paddingLeft: "7vw",
         },
         "@media (max-width: 450px)": {
+            minHeight: "700px",
+            paddingTop: "calc(3vh + 45px)",
+            paddingBottom: "3vh",
+            paddingRight: "10px",
+            paddingLeft: "10px",
+        },
+        "@media (max-width: 350px)": {
             minHeight: "600px",
             paddingTop: "calc(3vh + 45px)",
             paddingBottom: "3vh",
@@ -33,9 +43,9 @@ const useStyles = makeStyles({
         },
     },
     expContainer: {
-        background: "#0c0c0c",
+        background: "#ffffff",
         zIndex: 3,
-        border: "1px solid #FFFFFF",
+        border: "3px solid #000000",
         borderRadius: "15px",
         transition: "1.0s all ease",
     },
@@ -51,13 +61,28 @@ const useStyles = makeStyles({
         },
     },
     mainHeadingTxt: {
-        color: "#ffffff",
-        fontWeight: 500,
-        textShadow: "1px 2px #FF8C00",
+        color: "#000",
+        fontWeight: 600,
+        textShadow: "1px 2px #3BE2EA",
         "@media (max-width:600px)": {
             fontSize: "2rem",
             transition: "1.0s all ease",
         },
+    },
+    imgContainer: {
+        textAlign: "center",
+        paddingTop: 24,
+        paddingRight: 24,
+        paddingLeft: 24,
+        "@media (max-width:600px)": {
+            paddingTop: 16,
+            paddingLeft: 16,
+            paddingRight: 14,
+            transition: "1.0s all ease",
+        },
+    },
+    divider: {
+        background: "#0c0c0c",
     },
 });
 
@@ -77,17 +102,17 @@ const Experience = () => {
                     params={{
                         particles: {
                             number: {
-                                value: 200,
+                                value: 160,
                             },
                             size: {
                                 value: 5,
                                 random: true,
                             },
                             color: {
-                                value: "#ffffff",
+                                value: "#34EAB6",
                             },
                             links: {
-                                color: "#FFA500",
+                                color: "#3BE2EA",
                                 distance: 150,
                                 enable: true,
                                 opacity: 0.5,
@@ -167,8 +192,15 @@ const Experience = () => {
                     </Grid>
                 </Grid>
                 <Records {...RecordOne} />
+                <Divider variant="middle" className={classes.divider} />
                 <Records {...RecordTwo} />
+                <Divider variant="middle" className={classes.divider} />
                 {/* add additional experiece here */}
+                <Grid className={classes.imgContainer}>
+                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                        <ImageS {...experieceImg} />
+                    </Grid>
+                </Grid>
             </Grid>
         </Grid>
     );

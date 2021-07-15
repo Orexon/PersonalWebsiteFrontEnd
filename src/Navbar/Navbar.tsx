@@ -19,7 +19,7 @@ import { useEffect, useState } from "react";
 const useStyles = makeStyles((theme) => ({
     navBar: {
         height: "45px",
-        marginTop: "-45px",
+        marginTop: "-44px",
         transition: "0.5s all ease",
         zIndex: 10,
     },
@@ -131,7 +131,7 @@ const Navbar = (props: IProps) => {
                                                 smooth={true}
                                                 duration={500}
                                                 spy={true}
-                                                offset={-45}
+                                                offset={-44}
                                                 className={classes.linkS}
                                                 activeClass="active"
                                             >
@@ -145,7 +145,7 @@ const Navbar = (props: IProps) => {
                                                 smooth={true}
                                                 duration={500}
                                                 spy={true}
-                                                offset={-45}
+                                                offset={-44}
                                                 className={classes.linkS}
                                                 activeClass="active"
                                             >
@@ -159,7 +159,7 @@ const Navbar = (props: IProps) => {
                                                 smooth={true}
                                                 duration={500}
                                                 spy={true}
-                                                offset={-45}
+                                                offset={-44}
                                                 activeClass="active"
                                                 className={classes.linkS}
                                             >
@@ -173,7 +173,7 @@ const Navbar = (props: IProps) => {
                                                 smooth={true}
                                                 duration={500}
                                                 spy={true}
-                                                offset={-45}
+                                                offset={-44}
                                                 activeClass="active"
                                                 className={classes.linkS}
                                             >
@@ -187,7 +187,7 @@ const Navbar = (props: IProps) => {
                                                 smooth={true}
                                                 duration={500}
                                                 spy={true}
-                                                offset={-45}
+                                                offset={-44}
                                                 activeClass="active"
                                                 className={classes.linkS}
                                             >

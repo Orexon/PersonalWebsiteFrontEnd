@@ -1,4 +1,4 @@
-import { Grid, makeStyles, Typography } from "@material-ui/core";
+import { Divider, Grid, makeStyles, Typography } from "@material-ui/core";
 import { RecordOne, RecordTwo } from "./educationData";
 import Particles from "react-particles-js";
 import Records from "../HelperComponents/Records";
@@ -21,14 +21,14 @@ const useStyles = makeStyles({
             paddingBottom: "5vh",
         },
         "@media (max-width:600px)": {
-            minHeight: "900",
+            minHeight: "900px",
             paddingTop: "calc(3vh + 45px)",
             paddingBottom: "3vh",
             paddingRight: "7vw",
             paddingLeft: "7vw",
         },
         "@media (max-width: 450px)": {
-            minHeight: "850px",
+            minHeight: "800px",
             paddingTop: "calc(3vh + 45px)",
             paddingBottom: "3vh",
             paddingRight: "10px",
@@ -80,6 +80,9 @@ const useStyles = makeStyles({
             paddingRight: 14,
             transition: "1.0s all ease",
         },
+    },
+    divider: {
+        background: "#ffffff",
     },
 });
 
@@ -189,7 +192,9 @@ const Education = () => {
                     </Grid>
                 </Grid>
                 <Records {...RecordOne} />
+                <Divider variant="middle" className={classes.divider} />
                 <Records {...RecordTwo} />
+                <Divider variant="middle" className={classes.divider} />
                 {/* add additional experiece here */}
                 <Grid className={classes.imgContainer}>
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>

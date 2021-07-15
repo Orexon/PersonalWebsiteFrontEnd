@@ -16,15 +16,15 @@ const useStyles = makeStyles({
             maxWidth: 300,
             transition: "ease-in-out 1.5s",
         },
-        "@media (max-width:1024px)": {
+        "@media (max-width:1023px)": {
             maxWidth: 250,
             transition: "ease-in-out 1.5s",
         },
-        "@media (max-width:600px)": {
-            maxWidth: 250,
+        "@media (max-width:599px)": {
+            maxWidth: 200,
             transition: "ease-in-out 1.5s",
         },
-        "@media (max-width:400px)": {
+        "@media (max-width:399px)": {
             maxWidth: 150,
             transition: "ease-in-out 1.5s",
         },

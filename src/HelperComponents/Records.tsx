@@ -1,4 +1,5 @@
-import { Grid, makeStyles, Typography } from "@material-ui/core";
+import { Divider, Grid, makeStyles, Typography } from "@material-ui/core";
+import Education from "../Education/Education";
 
 interface IProps {
     id: string;
@@ -6,13 +7,15 @@ interface IProps {
     company: string;
     description: string;
     date: string;
+    dataset: string;
 }
 
 const useStyles = makeStyles({
     InfoContainer: {
-        paddingTop: 24,
+        paddingTop: 12,
         paddingLeft: 26,
         paddingRight: 24,
+        paddingBottom: 12,
         "@media (max-width:600px)": {
             paddingTop: 8,
             paddingLeft: 16,
@@ -20,6 +23,20 @@ const useStyles = makeStyles({
         },
     },
     positionTxt: {
+        color: "#000",
+        fontSize: "1.4rem",
+        paddingTop: 16,
+        paddingRight: 12,
+        fontWeight: 600,
+        textShadow: "1px 1px #3BE2EA",
+        "@media (max-width:600px)": {
+            fontSize: "0.9rem",
+            transition: "1.0s all ease",
+            paddingTop: 8,
+            paddingRight: 6,
+        },
+    },
+    educationPosTxt: {
         color: "#ffffff",
         fontSize: "1.4rem",
         paddingTop: 16,
@@ -34,6 +51,20 @@ const useStyles = makeStyles({
         },
     },
     companyTxt: {
+        color: "#000",
+        fontSize: "1.1rem",
+        paddingTop: 16,
+        paddingRight: 12,
+        fontWeight: 600,
+        textShadow: "1px 1px #3BE2EA",
+        "@media (max-width:600px)": {
+            fontSize: "0.9rem",
+            transition: "1.0s all ease",
+            paddingTop: 8,
+            paddingRight: 6,
+        },
+    },
+    companyEduTxt: {
         color: "#ffffff",
         fontSize: "1.1rem",
         paddingTop: 16,
@@ -47,10 +78,31 @@ const useStyles = makeStyles({
         },
     },
     dateTxt: {
+        color: "#000",
+        textShadow: "1px 1px #3BE2EA",
+        fontWeight: 600,
+    },
+    eduDateTxt: {
         color: "#ffffff",
         fontWeight: 500,
     },
     descriptionTxt: {
+        color: "#000",
+        fontSize: "0.9rem",
+        alignSelf: "center",
+        paddingTop: 16,
+        paddingRight: 12,
+        paddingBottom: 12,
+        fontWeight: 600,
+        textShadow: "0 1px #3BE2EA",
+        "@media (max-width:600px)": {
+            fontSize: "0.8rem",
+            transition: "1.0s all ease",
+            paddingTop: 8,
+            paddingRight: 6,
+        },
+    },
+    eduDescriptionTxt: {
         color: "#ffffff",
         fontSize: "0.9rem",
         alignSelf: "center",
@@ -86,7 +138,11 @@ const Records = (props: IProps) => {
                         md={12}
                         lg={12}
                         xl={12}
-                        className={classes.positionTxt}
+                        className={
+                            props.dataset === "Education"
+                                ? classes.educationPosTxt
+                                : classes.positionTxt
+                        }
                     >
                         {props.position}
                     </Grid>
@@ -97,7 +153,11 @@ const Records = (props: IProps) => {
                         md={12}
                         lg={12}
                         xl={12}
-                        className={classes.companyTxt}
+                        className={
+                            props.dataset === "Education"
+                                ? classes.companyEduTxt
+                                : classes.companyTxt
+                        }
                     >
                         {props.company}
                     </Grid>
@@ -108,7 +168,11 @@ const Records = (props: IProps) => {
                         md={12}
                         lg={12}
                         xl={12}
-                        className={classes.descriptionTxt}
+                        className={
+                            props.dataset === "Education"
+                                ? classes.eduDescriptionTxt
+                                : classes.descriptionTxt
+                        }
                     >
                         {props.description}
                     </Grid>
@@ -122,9 +186,15 @@ const Records = (props: IProps) => {
                 lg={2}
                 xl={2}
                 className={classes.dateTimeCont}
-                alignItems="center"
             >
-                <Typography variant="caption" className={classes.dateTxt}>
+                <Typography
+                    variant="caption"
+                    className={
+                        props.dataset === "Education"
+                            ? classes.eduDateTxt
+                            : classes.dateTxt
+                    }
+                >
                     {props.date}
                 </Typography>
             </Grid>

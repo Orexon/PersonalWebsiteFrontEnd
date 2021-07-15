@@ -5,6 +5,7 @@ export const RecordOne = {
     description:
         "I've build up my coding skills in front-end & back-end, while working on small internal project building back-end azure functions and front-end with React.JS utilizing material UI library",
     date: "Apr 2021 - Jul 2021",
+    dataset: "Experience",
 };
 export const RecordTwo = {
     id: "two",
@@ -13,4 +14,5 @@ export const RecordTwo = {
     description:
         "Here could be the place where I talk about all the accomplishments we have achieved while working together!",
     date: "Anytime in future? - Untill we part our ways.",
+    dataset: "Experience",
 };

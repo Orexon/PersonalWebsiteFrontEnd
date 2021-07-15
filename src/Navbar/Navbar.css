@@ -1,7 +1,6 @@
 .appBar {
-    height: 45px !important;
+    height: 47px !important;
     transition: 0.5s all ease;
-    z-index: 5;
 }
 .MuiToolbar-regular {
     min-height: 40px !important;

@@ -1,9 +1,9 @@
 export const experieceImg = {
-    src: "../../public/Images/certificate.svg",
+    src: "../Images/Experience.svg",
 };
 export const educationImg = {
     src: "../Images/Certificate.svg",
 };
-export const RecordThree = {
+export const skillsImg = {
     src: "../../public/Images/certificate.svg",
 };
