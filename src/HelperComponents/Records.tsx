@@ -1,6 +1,4 @@
-import { Divider, Grid, makeStyles, Typography } from "@material-ui/core";
-import Education from "../Education/Education";
-
+import { Grid, makeStyles, Typography } from "@material-ui/core";
 interface IProps {
     id: string;
     position: string;

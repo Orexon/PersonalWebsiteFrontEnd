@@ -11,7 +11,6 @@ const useStyles = makeStyles({
         overflow: "hidden",
         background: "#0c0c0c",
         minHeight: "100vh",
-        height: "100%",
         paddingTop: "10vh",
         paddingBottom: "10vh",
         transition: "1.0s all ease",

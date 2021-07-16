@@ -19,9 +19,10 @@ import { useEffect, useState } from "react";
 const useStyles = makeStyles((theme) => ({
     navBar: {
         height: "45px",
-        marginTop: "-44px",
+        marginTop: "-45px",
         transition: "0.5s all ease",
         zIndex: 10,
+        top: 0,
     },
     text: {
         color: "white",
@@ -55,7 +56,7 @@ const Navbar = (props: IProps) => {
     const [scrollNav, setScrollNav] = useState(false);
 
     const changeNav = () => {
-        if (window.scrollY >= 45) {
+        if (window.scrollY >= 46) {
             setScrollNav(true);
         } else {
             setScrollNav(false);
@@ -131,7 +132,7 @@ const Navbar = (props: IProps) => {
                                                 smooth={true}
                                                 duration={500}
                                                 spy={true}
-                                                offset={-44}
+                                                offset={-43}
                                                 className={classes.linkS}
                                                 activeClass="active"
                                             >
@@ -145,7 +146,7 @@ const Navbar = (props: IProps) => {
                                                 smooth={true}
                                                 duration={500}
                                                 spy={true}
-                                                offset={-44}
+                                                offset={-43}
                                                 className={classes.linkS}
                                                 activeClass="active"
                                             >
@@ -159,7 +160,7 @@ const Navbar = (props: IProps) => {
                                                 smooth={true}
                                                 duration={500}
                                                 spy={true}
-                                                offset={-44}
+                                                offset={-43}
                                                 activeClass="active"
                                                 className={classes.linkS}
                                             >
@@ -173,7 +174,7 @@ const Navbar = (props: IProps) => {
                                                 smooth={true}
                                                 duration={500}
                                                 spy={true}
-                                                offset={-44}
+                                                offset={-43}
                                                 activeClass="active"
                                                 className={classes.linkS}
                                             >
@@ -187,7 +188,7 @@ const Navbar = (props: IProps) => {
                                                 smooth={true}
                                                 duration={500}
                                                 spy={true}
-                                                offset={-44}
+                                                offset={-43}
                                                 activeClass="active"
                                                 className={classes.linkS}
                                             >

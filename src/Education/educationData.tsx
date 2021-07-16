@@ -1,5 +1,3 @@
-import Education from "./Education";
-
 export const RecordTwo = {
     id: "one",
     position: "Law",

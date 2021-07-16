@@ -13,7 +13,6 @@ import {
 const useStyles = makeStyles({
     skills: {
         minHeight: "100vh",
-        height: "100%",
         color: "#ffffff",
     },
     skillsCont: {
@@ -154,6 +153,7 @@ const Skills = () => {
                                 <img
                                     className={classes.imageIcon}
                                     src="../Images/cSharp.svg"
+                                    alt="C sharp logo"
                                 />
                             </Icon>
                         </Grid>
@@ -163,6 +163,7 @@ const Skills = () => {
                                 <img
                                     className={classes.imageIcon}
                                     src="../Images/MCNET.svg"
+                                    alt="C sharp logo"
                                 />
                             </Icon>
                         </Grid>

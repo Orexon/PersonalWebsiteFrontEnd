@@ -4,6 +4,6 @@ export const experieceImg = {
 export const educationImg = {
     src: "../Images/Certificate.svg",
 };
-export const skillsImg = {
-    src: "../../public/Images/certificate.svg",
+export const interestImg = {
+    src: "../Images/BookPileFinal.svg",
 };

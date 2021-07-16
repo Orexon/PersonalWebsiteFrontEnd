@@ -1,5 +1,4 @@
-import { Grid, makeStyles } from "@material-ui/core";
-import React from "react";
+import { makeStyles } from "@material-ui/core";
 
 interface IProps {
     src: string;
@@ -32,7 +31,7 @@ const useStyles = makeStyles({
 });
 const ImageS = (props: IProps) => {
     const classes = useStyles();
-    return <img src={props.src} className={classes.eduPic} />;
+    return <img src={props.src} className={classes.eduPic} alt="svGstockImg" />;
 };
 
 export default ImageS;
