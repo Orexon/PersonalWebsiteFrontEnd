@@ -74,9 +74,9 @@ const Interests = () => {
                             workouts, such as a biking, which is a daily routine
                             for me. When indoors, I follow a number of sci-fi
                             and fantasy genre movies and television shows, I am
-                            an aspiring chef(enjoy not only tasting , but making
-                            the food aswell), and I spend a large amount of my
-                            free time exploring the latest technology
+                            an aspiring chef - enjoy not only tasting, but
+                            making the food aswell, and I spend a large amount
+                            of my free time exploring the latest technology
                             advancements.
                         </Typography>
                     </Grid>

@@ -227,10 +227,11 @@ const About = () => {
                             id="TxtTxt"
                             className={classes.homeTextbody}
                         >
-                            I am experienced in stock text frameworks to provide
-                            a robust synopsis for high level stock text.
-                            Iterative approaches to corporate stock text stock
-                            text to further
+                            I am a junior Full-Stack developer, always looking
+                            for opportunities to expand my knowledge and apply
+                            my skill into problem solving solutions. Passionate
+                            in learning new things and eager to bring creative
+                            ideas into the field of work I am assigned.
                         </Typography>
                     </Grid>
                 </Grid>
@@ -262,6 +263,8 @@ const About = () => {
                                 variant="outlined"
                                 color="primary"
                                 size="large"
+                                href="https://www.linkedin.com/in/mindaugas-kriau%C4%8Di%C5%ABnas-03a677131/"
+                                target="_blank"
                                 className={classes.btnTo}
                                 startIcon={<LinkedInIcon />}
                             >
@@ -273,6 +276,8 @@ const About = () => {
                                 variant="outlined"
                                 color="primary"
                                 size="large"
+                                href="https://github.com/Orexon"
+                                target="_blank"
                                 startIcon={<GitHubIcon />}
                                 className={classes.btnTo}
                             >
