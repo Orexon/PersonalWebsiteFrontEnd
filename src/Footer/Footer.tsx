@@ -1,5 +1,4 @@
 import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
@@ -25,7 +24,7 @@ const Footer = () => {
             <Container maxWidth="sm">
                 <Typography variant="body2" className={classes.textFooter}>
                     {"Copyright © "}
-                    <Link color="inherit" href="https://mindkriauciunas.com/">
+                    <Link color="inherit" href="http://mindkriauciunas.lt/">
                         mindkriauciunas
                     </Link>{" "}
                     {new Date().getFullYear()}
