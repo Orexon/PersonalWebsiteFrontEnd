@@ -45,7 +45,7 @@ const useStyles = makeStyles({
     homeTextheading: {
         color: "white",
         textAlign: "center",
-        fontWeight: 600,
+        fontWeight: 700,
         transition: "0.6s all ease",
         animation: "fadeIn 1s",
         "@media only screen and (min-width:1312px)": {
@@ -74,7 +74,7 @@ const useStyles = makeStyles({
     homeTextbody: {
         color: "#FFFFFF",
         textAlign: "center",
-        fontWeight: 600,
+        fontWeight: 500,
         paddingTop: 16,
         animation: "fadeIn linear 1s",
         "@media only screen and (min-width:1312px)": {
@@ -158,7 +158,7 @@ const About = () => {
         const inputValue = document.getElementById(
             "myVideo"
         ) as HTMLVideoElement;
-        inputValue.playbackRate = 0.7;
+        inputValue.playbackRate = 0.5;
     });
 
     return (

@@ -2,12 +2,9 @@
     cursor: pointer;
     -webkit-text-stroke: 1px #ffffff;
     color: transparent;
-    text-shadow: 4px 4px 0 transparent, -1px -1px 0 transparent,
-        1px -1px 0 transparent, -1px 1px 0 transparent, 1px 1px 0 transparent;
 }
 
 #TxtTxt {
-    -webkit-text-stroke: 1px black;
     color: white;
 }
 
@@ -15,9 +12,6 @@
     #TxtTxt {
         -webkit-text-stroke: 1px transparent !important;
         color: white !important;
-        text-shadow: 1px 1px 0 transparent, -1px -1px 0 transparent,
-            1px -1px 0 transparent, -1px 1px 0 transparent,
-            1px 1px 0 transparent;
     }
 }
 
