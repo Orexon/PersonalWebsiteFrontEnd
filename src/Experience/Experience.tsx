@@ -1,6 +1,5 @@
 import { Grid, makeStyles, Typography, Divider } from "@material-ui/core";
 import { RecordOne, RecordTwo } from "./data";
-import Records from "../HelperComponents/Records";
 import ImageS from "../HelperComponents/Image";
 import { experieceImg } from "../HelperComponents/imgData";
 import ExpRecords from "../HelperComponents/experienceRecords";

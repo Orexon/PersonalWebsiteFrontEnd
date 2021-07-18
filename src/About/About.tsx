@@ -155,9 +155,10 @@ const About = () => {
     };
 
     useEffect(() => {
-        let inputValue = ((
-            document.getElementById("myVideo") as HTMLVideoElement
-        ).playbackRate = 0.7);
+        const inputValue = document.getElementById(
+            "myVideo"
+        ) as HTMLVideoElement;
+        inputValue.playbackRate = 0.7;
     });
 
     return (

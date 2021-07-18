@@ -1,6 +1,5 @@
 import { Divider, Grid, makeStyles, Typography } from "@material-ui/core";
 import { RecordOne, RecordTwo } from "./educationData";
-import Particles from "react-particles-js";
 import Records from "../HelperComponents/Records";
 import ImageS from "../HelperComponents/Image";
 import { educationImg } from "../HelperComponents/imgData";
