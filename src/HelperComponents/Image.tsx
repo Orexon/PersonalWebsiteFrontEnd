@@ -7,6 +7,8 @@ interface IProps {
 const useStyles = makeStyles({
     eduPic: {
         maxWidth: 350,
+        width: "100%",
+        height: "auto",
         "@media only screen and (min-width:1312px)": {
             maxWidth: 350,
             transition: "ease-in-out 1.5s",
@@ -19,12 +21,18 @@ const useStyles = makeStyles({
             maxWidth: 250,
             transition: "ease-in-out 1.5s",
         },
+
+        "@media (max-width:900px)": {
+            maxWidth: 230,
+            transition: "ease-in-out 1.5s",
+        },
         "@media (max-width:599px)": {
             maxWidth: 200,
             transition: "ease-in-out 1.5s",
         },
-        "@media (max-width:399px)": {
-            maxWidth: 150,
+        "@media (max-width:420px)": {
+            paddingTop: 0,
+            maxWidth: 170,
             transition: "ease-in-out 1.5s",
         },
     },

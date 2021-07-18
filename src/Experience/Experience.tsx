@@ -1,51 +1,46 @@
 import { Grid, makeStyles, Typography, Divider } from "@material-ui/core";
 import { RecordOne, RecordTwo } from "./data";
-import Particles from "react-particles-js";
 import Records from "../HelperComponents/Records";
 import ImageS from "../HelperComponents/Image";
 import { experieceImg } from "../HelperComponents/imgData";
+import ExpRecords from "../HelperComponents/experienceRecords";
 
 const useStyles = makeStyles({
+    skillTxt: {
+        fontWeight: 500,
+    },
     experience: {
-        position: "relative",
-        overflow: "hidden",
-        background: "#ffffff",
+        color: "#ffffff",
+        background: "#0c0c0c",
         minHeight: "100vh",
         paddingTop: "10vh",
         paddingBottom: "10vh",
         transition: "1.0s all ease",
         "@media (max-width:900px)": {
-            minHeight: "950px",
-            paddingTop: "5vh",
-            paddingBottom: "5vh",
+            minHeight: "100vh",
+            paddingTop: "3vh",
+            paddingBottom: "3vh",
         },
         "@media (max-width:600px)": {
-            minHeight: "900px",
+            minHeight: "100vh",
             paddingTop: "calc(3vh + 45px)",
             paddingBottom: "3vh",
-            paddingRight: "7vw",
-            paddingLeft: "7vw",
         },
         "@media (max-width: 450px)": {
-            minHeight: "700px",
-            paddingTop: "calc(3vh + 45px)",
+            minHeight: "100vh",
+            paddingTop: "calc(20px + 45px)",
             paddingBottom: "3vh",
-            paddingRight: "10px",
-            paddingLeft: "10px",
         },
         "@media (max-width: 350px)": {
-            minHeight: "600px",
-            paddingTop: "calc(3vh + 45px)",
+            minHeight: "100vh",
+            paddingTop: "calc(20px + 45px)",
             paddingBottom: "3vh",
-            paddingRight: "10px",
-            paddingLeft: "10px",
         },
     },
     expContainer: {
-        background: "#ffffff",
+        paddingLeft: "24px",
+        paddingRight: "24px",
         zIndex: 3,
-        border: "3px solid #000000",
-        borderRadius: "15px",
         transition: "1.0s all ease",
     },
     mainHeading: {
@@ -60,10 +55,30 @@ const useStyles = makeStyles({
         },
     },
     mainHeadingTxt: {
-        color: "#000",
+        color: "#ffffff",
         fontWeight: 600,
-        textShadow: "1px 2px #3BE2EA",
+        textShadow: "1px 2px #FFA500",
+        "@media only screen and (min-width:1312px)": {
+            fontSize: "3.5rem",
+            transition: "1.0s all ease",
+        },
+        "@media only screen and (max-width:1312px)": {
+            fontSize: "3rem",
+            transition: "1.0s all ease",
+        },
+        "@media (max-width:1024px)": {
+            fontSize: "2.7rem",
+            transition: "1.0s all ease",
+        },
+        "@media (max-width:900px)": {
+            fontSize: "2.5rem",
+            transition: "1.0s all ease",
+        },
         "@media (max-width:600px)": {
+            fontSize: "2.3rem",
+            transition: "1.0s all ease",
+        },
+        "@media (max-width:450px)": {
             fontSize: "2rem",
             transition: "1.0s all ease",
         },
@@ -74,14 +89,15 @@ const useStyles = makeStyles({
         paddingRight: 24,
         paddingLeft: 24,
         "@media (max-width:600px)": {
-            paddingTop: 16,
+            display: "block",
+            paddingTop: 8,
             paddingLeft: 16,
             paddingRight: 14,
             transition: "1.0s all ease",
         },
     },
     divider: {
-        background: "#0c0c0c",
+        background: "#ffffff",
     },
 });
 
@@ -89,114 +105,55 @@ const Experience = () => {
     const classes = useStyles();
     return (
         <Grid
-            container
             id="experience"
-            className={classes.experience}
             justify="center"
+            alignItems="center"
+            className={classes.experience}
+            container
         >
-            <div style={{ position: "absolute", top: 0 }}>
-                <Particles
-                    height="calc(100vh)"
-                    width="100vw"
-                    params={{
-                        particles: {
-                            number: {
-                                value: 160,
-                            },
-                            size: {
-                                value: 5,
-                                random: true,
-                            },
-                            color: {
-                                value: "#34EAB6",
-                            },
-                            links: {
-                                color: "#3BE2EA",
-                                distance: 150,
-                                enable: true,
-                                opacity: 0.5,
-                                width: 1,
-                            },
-                            collisions: {
-                                enable: true,
-                            },
-                            move: {
-                                direction: "none",
-                                enable: true,
-                                outMode: "bounce",
-                                random: false,
-                                speed: 3,
-                                straight: false,
-                            },
-                            shape: {
-                                type: "circle",
-                            },
-                        },
-                        interactivity: {
-                            detectsOn: "canvas",
-                            events: {
-                                onhover: {
-                                    enable: true,
-                                    mode: "grab",
-                                },
-                                onclick: {
-                                    enable: true,
-                                    mode: "push",
-                                },
-                                resize: true,
-                            },
-                            modes: {
-                                bubble: {
-                                    distance: 400,
-                                    duration: 2,
-                                    opacity: 0.8,
-                                    size: 40,
-                                },
-                                push: {
-                                    quantity: 4,
-                                },
-                                repulse: {
-                                    distance: 200,
-                                    duration: 0.4,
-                                },
-                                grab: {
-                                    distance: 140,
-                                    links: {
-                                        opacity: 1,
-                                    },
-                                },
-                            },
-                        },
-                        detectRetina: true,
-                    }}
-                />
-            </div>
             <Grid
                 item
                 xs={12}
                 sm={10}
                 md={8}
                 lg={8}
-                xl={6}
+                xl={8}
                 className={classes.expContainer}
             >
-                <Grid container className={classes.mainHeading}>
+                <Grid item xs={12} sm={12} md={12} lg={12} xl={12} container>
                     <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
                         <Typography
                             variant="h2"
                             className={classes.mainHeadingTxt}
                         >
-                            Experience
+                            Experience{" "}
                         </Typography>
                     </Grid>
-                </Grid>
-                <Records {...RecordOne} />
-                <Divider variant="middle" className={classes.divider} />
-                <Records {...RecordTwo} />
-                <Divider variant="middle" className={classes.divider} />
-                {/* add additional experiece here */}
-                <Grid className={classes.imgContainer}>
-                    <Grid item xs={12} sm={12} md={12} lg={12} xl={12}>
+                    <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        md={12}
+                        lg={8}
+                        xl={8}
+                        justify="center"
+                        alignContent="center"
+                        container
+                    >
+                        <ExpRecords {...RecordOne} />
+                        <Divider variant="middle" className={classes.divider} />
+                        <ExpRecords {...RecordTwo} />
+                        <Divider variant="middle" className={classes.divider} />
+                    </Grid>
+                    <Grid
+                        item
+                        xs={12}
+                        sm={12}
+                        md={12}
+                        lg={4}
+                        xl={4}
+                        className={classes.imgContainer}
+                    >
                         <ImageS {...experieceImg} />
                     </Grid>
                 </Grid>

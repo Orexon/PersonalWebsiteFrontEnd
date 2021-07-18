@@ -1,5 +1,5 @@
 import { Button, Grid, makeStyles, Typography } from "@material-ui/core";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import Video from "../videos/video2.mp4";
@@ -78,7 +78,7 @@ const useStyles = makeStyles({
         paddingTop: 16,
         animation: "fadeIn linear 1s",
         "@media only screen and (min-width:1312px)": {
-            fontSize: "1.5em",
+            fontSize: "1.7em",
             transition: "1.0s all ease",
         },
         "@media only screen and (max-width:1312px)": {
@@ -154,10 +154,17 @@ const About = () => {
         setLogoVisible(!logoVisible);
     };
 
+    useEffect(() => {
+        let inputValue = ((
+            document.getElementById("myVideo") as HTMLVideoElement
+        ).playbackRate = 0.7);
+    });
+
     return (
         <Grid className={classes.home} id="about">
             <div className={classes.homeBg}>
                 <video
+                    id="myVideo"
                     className={classes.videoBg}
                     autoPlay
                     loop

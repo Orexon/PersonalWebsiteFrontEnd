@@ -1,36 +1,28 @@
 import { Grid, Icon, makeStyles, Typography } from "@material-ui/core";
-import Video from "../videos/video.mp4";
+
 import {
     FaHtml5,
     FaCss3Alt,
     FaJsSquare,
     FaReact,
     FaSass,
-    FaNpm,
     FaGithub,
 } from "react-icons/fa";
 
 const useStyles = makeStyles({
     skills: {
         minHeight: "100vh",
+        height: "100vh",
         color: "#ffffff",
+        background: "#0c0c0c",
+        backgroundImage: `url(${"../Images/bgfinal.jpg"})`,
+        backgroundSize: "cover",
+        top: 0,
     },
     skillsCont: {
         zIndex: 5,
         paddingRight: 24,
         paddingLeft: 24,
-    },
-    homeBg: {
-        overflow: "hidden",
-        width: "100%",
-        height: "100%",
-        position: "absolute",
-    },
-    videoBg: {
-        width: "100%",
-        height: "100%",
-        objectFit: "cover",
-        background: "#232a34",
     },
     eduContainer: {
         zIndex: 3,
@@ -55,6 +47,11 @@ const useStyles = makeStyles({
     skillTxt: {
         fontWeight: 500,
     },
+    IconItemContainer: {
+        paddingTop: 10,
+        paddingLeft: 2,
+        paddingRight: 2,
+    },
 });
 
 const Skills = () => {
@@ -67,16 +64,6 @@ const Skills = () => {
             justify="center"
             alignItems="center"
         >
-            <div className={classes.homeBg}>
-                <video
-                    className={classes.videoBg}
-                    autoPlay
-                    loop
-                    muted
-                    src={Video}
-                />
-            </div>
-
             <Grid container justify="center" className={classes.skillsCont}>
                 <Grid
                     item
@@ -119,35 +106,55 @@ const Skills = () => {
                         justify="space-evenly"
                         container
                     >
-                        <Grid item>
+                        <Grid item className={classes.IconItemContainer}>
                             {" "}
-                            <FaHtml5 color="white" size={70} />{" "}
+                            <FaHtml5
+                                color="white"
+                                size={70}
+                                className={classes.imageIcon}
+                            />{" "}
                         </Grid>
-                        <Grid item>
+                        <Grid item className={classes.IconItemContainer}>
                             {" "}
-                            <FaCss3Alt color="white" size={70} />
+                            <FaCss3Alt
+                                color="white"
+                                size={70}
+                                className={classes.imageIcon}
+                            />
                         </Grid>
-                        <Grid item>
+                        <Grid item className={classes.IconItemContainer}>
                             {" "}
-                            <FaJsSquare color="white" size={70} />
+                            <FaJsSquare
+                                color="white"
+                                size={70}
+                                className={classes.imageIcon}
+                            />
                         </Grid>
-                        <Grid item>
+                        <Grid item className={classes.IconItemContainer}>
                             {" "}
-                            <FaReact color="white" size={70} />
+                            <FaReact
+                                color="white"
+                                size={70}
+                                className={classes.imageIcon}
+                            />
                         </Grid>
-                        <Grid item>
+                        <Grid item className={classes.IconItemContainer}>
                             {" "}
-                            <FaSass color="white" size={70} />
+                            <FaSass
+                                color="white"
+                                size={70}
+                                className={classes.imageIcon}
+                            />
                         </Grid>
-                        <Grid item>
+                        <Grid item className={classes.IconItemContainer}>
                             {" "}
-                            <FaNpm color="white" size={70} />
+                            <FaGithub
+                                color="white"
+                                size={70}
+                                className={classes.imageIcon}
+                            />
                         </Grid>
-                        <Grid item>
-                            {" "}
-                            <FaGithub color="white" size={70} />
-                        </Grid>
-                        <Grid item>
+                        <Grid item className={classes.IconItemContainer}>
                             {" "}
                             <Icon classes={{ root: classes.iconRoot }}>
                                 <img
@@ -157,7 +164,7 @@ const Skills = () => {
                                 />
                             </Icon>
                         </Grid>
-                        <Grid item>
+                        <Grid item className={classes.IconItemContainer}>
                             {" "}
                             <Icon classes={{ root: classes.iconRoot }}>
                                 <img

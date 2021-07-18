@@ -14,27 +14,30 @@ const useStyles = makeStyles({
         paddingTop: "10vh",
         paddingBottom: "10vh",
         transition: "1.0s all ease",
+        backgroundImage: `url(${"../Images/bgLines.jpg"})`,
+        backgroundSize: "cover",
+        top: 0,
         "@media (max-width:900px)": {
-            minHeight: "950px",
+            minHeight: "100vh",
             paddingTop: "5vh",
             paddingBottom: "5vh",
         },
         "@media (max-width:600px)": {
-            minHeight: "900px",
+            minHeight: "100vh",
             paddingTop: "calc(3vh + 45px)",
             paddingBottom: "3vh",
             paddingRight: "7vw",
             paddingLeft: "7vw",
         },
         "@media (max-width: 450px)": {
-            minHeight: "800px",
+            minHeight: "100vh",
             paddingTop: "calc(3vh + 45px)",
             paddingBottom: "3vh",
             paddingRight: "10px",
             paddingLeft: "10px",
         },
         "@media (max-width: 350px)": {
-            minHeight: "900px",
+            minHeight: "100vh",
             paddingTop: "calc(3vh + 45px)",
             paddingBottom: "3vh",
             paddingRight: "10px",
@@ -94,7 +97,7 @@ const Education = () => {
             className={classes.education}
             justify="center"
         >
-            <div style={{ position: "absolute", top: 0 }}>
+            {/* <div style={{ position: "absolute", top: 0 }}>
                 <Particles
                     height="100vh"
                     width="100vw"
@@ -125,7 +128,7 @@ const Education = () => {
                                 enable: true,
                                 outMode: "bounce",
                                 random: false,
-                                speed: 3,
+                                speed: 2,
                                 straight: false,
                             },
                             shape: {
@@ -170,7 +173,7 @@ const Education = () => {
                         detectRetina: true,
                     }}
                 />
-            </div>
+            </div> */}
             <Grid
                 item
                 xs={12}

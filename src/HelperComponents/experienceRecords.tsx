@@ -10,14 +10,8 @@ interface IProps {
 
 const useStyles = makeStyles({
     InfoContainer: {
-        paddingTop: 12,
-        paddingLeft: 26,
-        paddingRight: 24,
-        paddingBottom: 12,
         "@media (max-width:600px)": {
             paddingTop: 8,
-            paddingLeft: 16,
-            paddingRight: 14,
         },
     },
     positionTxt: {
@@ -33,6 +27,10 @@ const useStyles = makeStyles({
             paddingTop: 8,
             paddingRight: 6,
         },
+        "@media (max-width:450px)": {
+            fontSize: "0.8rem",
+            transition: "1.0s all ease",
+        },
     },
     companyTxt: {
         color: "#ffffff",
@@ -46,6 +44,10 @@ const useStyles = makeStyles({
             paddingTop: 8,
             paddingRight: 6,
         },
+        "@media (max-width:450px)": {
+            fontSize: "0.8rem",
+            transition: "1.0s all ease",
+        },
     },
     dateTxt: {
         color: "#ffffff",
@@ -56,14 +58,18 @@ const useStyles = makeStyles({
         fontSize: "0.9rem",
         alignSelf: "center",
         paddingTop: 16,
-        paddingRight: 12,
-        paddingBottom: 12,
+        paddingRight: 10,
+        paddingBottom: 10,
         fontWeight: 500,
         "@media (max-width:600px)": {
             fontSize: "0.8rem",
             transition: "1.0s all ease",
             paddingTop: 8,
             paddingRight: 6,
+        },
+        "@media (max-width:450px)": {
+            fontSize: "0.7rem",
+            transition: "1.0s all ease",
         },
     },
     dateTimeCont: {
@@ -74,7 +80,7 @@ const useStyles = makeStyles({
     },
 });
 
-const Records = (props: IProps) => {
+const ExpRecords = (props: IProps) => {
     const classes = useStyles();
     return (
         <Grid container className={classes.InfoContainer} id={props.id}>
@@ -132,4 +138,4 @@ const Records = (props: IProps) => {
     );
 };
 
-export default Records;
+export default ExpRecords;
