@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+        <script
+            id="Cookiebot"
+            src="https://consent.cookiebot.com/uc.js"
+            data-cbid="a0f600af-a67d-4f84-9875-e856ef4af05b"
+            data-blockingmode="auto"
+            type="text/javascript"
+        ></script>
         <!-- Google Tag Manager -->
         <!-- Global site tag (gtag.js) - Google Analytics -->
         <script
@@ -12,10 +19,25 @@
             function gtag() {
                 dataLayer.push(arguments);
             }
+            gtag("consent", "default", {
+                ad_storage: "denied",
+                analytics_storage: "denied",
+            });
+
             gtag("js", new Date());
 
             gtag("config", "G-2MJGHG0XC0");
         </script>
+
+        <script>
+            function consentGranted() {
+                gtag("consent", "update", {
+                    ad_storage: "granted",
+                    analytics_storage: "granted",
+                });
+            }
+        </script>
+
         <!-- End Google Tag Manager -->
         <meta charset="utf-8" />
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
@@ -55,6 +77,12 @@
         <title>Personal website</title>
     </head>
     <body>
+        <script
+            id="CookieDeclaration"
+            src="https://consent.cookiebot.com/a0f600af-a67d-4f84-9875-e856ef4af05b/cd.js"
+            type="text/javascript"
+            async
+        ></script>
         <noscript>You need to enable JavaScript to run this app.</noscript>
         <div id="root"></div>
         <!--
