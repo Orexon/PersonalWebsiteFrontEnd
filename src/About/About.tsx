@@ -1,8 +1,9 @@
-import { Button, Grid, makeStyles, Typography } from "@material-ui/core";
-import { useEffect, useState } from "react";
+import {Button, Grid, makeStyles, Typography} from "@material-ui/core";
+import {useEffect, useState} from "react";
 import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import GitHubIcon from "@material-ui/icons/GitHub";
 import Video from "../videos/video2.mp4";
+import Link from "@material-ui/core/Link";
 import "./About.css";
 
 const useStyles = makeStyles({
@@ -145,21 +146,15 @@ const useStyles = makeStyles({
             transition: "ease-in-out 1.5s",
         },
     },
+    textFooter: {
+        color: "#ffffff",
+        textAlign: "center",
+        fontWeight: 500,
+    }
 });
 
 const About = () => {
     const classes = useStyles();
-    const [logoVisible, setLogoVisible] = useState(false);
-    const toggleLogoVisibility = () => {
-        setLogoVisible(!logoVisible);
-    };
-
-    useEffect(() => {
-        const inputValue = document.getElementById(
-            "myVideo"
-        ) as HTMLVideoElement;
-        inputValue.playbackRate = 0.5;
-    });
 
     return (
         <Grid className={classes.home} id="about">
@@ -186,6 +181,7 @@ const About = () => {
                 xs={10}
                 container
             >
+                {/* Main content */}
                 <Grid
                     item
                     xl={7}
@@ -198,49 +194,16 @@ const About = () => {
                     container
                 >
                     <Grid
-                        item
-                        xl={10}
-                        lg={10}
-                        md={12}
-                        sm={12}
-                        xs={12}
-                        onClick={toggleLogoVisibility}
+                        container
+                        justify="center"
+                        alignItems="center"
+                        className="fadeInAnimation"
                     >
-                        {logoVisible ? (
-                            <Grid
-                                container
-                                justify="center"
-                                alignItems="center"
-                                className="fadeInAnimation"
-                            >
-                                <img
-                                    className={classes.mainLogo}
-                                    src="../Images/GooWhite.svg"
-                                    alt="Logo"
-                                />
-                            </Grid>
-                        ) : (
-                            <Typography
-                                variant="h2"
-                                id="HeadingTxt"
-                                className={classes.homeTextheading}
-                            >
-                                Mindaugas Kriaučiūnas
-                            </Typography>
-                        )}
-                    </Grid>
-                    <Grid item xl={10} lg={9} md={10} sm={10} xs={12}>
-                        <Typography
-                            variant="h6"
-                            id="TxtTxt"
-                            className={classes.homeTextbody}
-                        >
-                            I am a junior Full-Stack developer, always looking
-                            for opportunities to expand my knowledge and apply
-                            my skill into problem solving solutions. Passionate
-                            in learning new things and eager to bring creative
-                            ideas into the field of work I am assigned.
-                        </Typography>
+                        <img
+                            className={classes.mainLogo}
+                            src="../Images/GooWhite.svg"
+                            alt="Logo"
+                        />
                     </Grid>
                 </Grid>
                 <Grid
@@ -248,50 +211,38 @@ const About = () => {
                     xl={10}
                     lg={10}
                     md={12}
-                    sm={12}
-                    xs={12}
+                    sm={8}
+                    xs={10}
                     justify="center"
                     alignItems="center"
                     container
+                    className={classes.btnContainer}
                 >
-                    <Grid
-                        item
-                        xl={10}
-                        lg={10}
-                        md={12}
-                        sm={8}
-                        xs={10}
-                        justify="center"
-                        alignItems="center"
-                        container
-                        className={classes.btnContainer}
-                    >
-                        <Grid item className={classes.btnOuter}>
-                            <Button
-                                variant="outlined"
-                                color="primary"
-                                size="large"
-                                href="https://www.linkedin.com/in/mindaugas-kriau%C4%8Di%C5%ABnas-03a677131/"
-                                target="_blank"
-                                className={classes.btnTo}
-                                startIcon={<LinkedInIcon />}
-                            >
-                                LinkedIn
-                            </Button>
-                        </Grid>
-                        <Grid item className={classes.btnOuter}>
-                            <Button
-                                variant="outlined"
-                                color="primary"
-                                size="large"
-                                href="https://github.com/Orexon"
-                                target="_blank"
-                                startIcon={<GitHubIcon />}
-                                className={classes.btnTo}
-                            >
-                                GitHub
-                            </Button>
-                        </Grid>
+                    <Grid item className={classes.btnOuter}>
+                        <Button
+                            variant="outlined"
+                            color="primary"
+                            size="large"
+                            href="https://www.linkedin.com/in/mindaugas-kriau%C4%8Di%C5%ABnas-03a677131/"
+                            target="_blank"
+                            className={classes.btnTo}
+                            startIcon={<LinkedInIcon />}
+                        >
+                            LinkedIn
+                        </Button>
+                    </Grid>
+                    <Grid item className={classes.btnOuter}>
+                        <Button
+                            variant="outlined"
+                            color="primary"
+                            size="large"
+                            href="https://github.com/Orexon"
+                            target="_blank"
+                            startIcon={<GitHubIcon />}
+                            className={classes.btnTo}
+                        >
+                            GitHub
+                        </Button>
                     </Grid>
                 </Grid>
             </Grid>

@@ -139,62 +139,6 @@ const Navbar = (props: IProps) => {
                                                 About
                                             </ListItem>
                                         </Grid>
-                                        <Grid item className="activeBorder">
-                                            <ListItem
-                                                component={LinkS}
-                                                to="experience"
-                                                smooth={true}
-                                                duration={500}
-                                                spy={true}
-                                                offset={-43}
-                                                className={classes.linkS}
-                                                activeClass="active"
-                                            >
-                                                Experience
-                                            </ListItem>
-                                        </Grid>
-                                        <Grid item className="activeBorder">
-                                            <ListItem
-                                                component={LinkS}
-                                                to="education"
-                                                smooth={true}
-                                                duration={500}
-                                                spy={true}
-                                                offset={-43}
-                                                activeClass="active"
-                                                className={classes.linkS}
-                                            >
-                                                Education
-                                            </ListItem>
-                                        </Grid>
-                                        <Grid item className="activeBorder">
-                                            <ListItem
-                                                component={LinkS}
-                                                to="skills"
-                                                smooth={true}
-                                                duration={500}
-                                                spy={true}
-                                                offset={-43}
-                                                activeClass="active"
-                                                className={classes.linkS}
-                                            >
-                                                Skills
-                                            </ListItem>
-                                        </Grid>
-                                        <Grid item className="activeBorder">
-                                            <ListItem
-                                                component={LinkS}
-                                                to="interests"
-                                                smooth={true}
-                                                duration={500}
-                                                spy={true}
-                                                offset={-43}
-                                                activeClass="active"
-                                                className={classes.linkS}
-                                            >
-                                                Interests
-                                            </ListItem>
-                                        </Grid>
                                     </Hidden>
                                 </Grid>
                             </Grid>

@@ -109,58 +109,6 @@ const Sidebar = (props: IProps) => {
                             classes={{ primary: classes.listItemText }}
                         />
                     </ListItem>
-                    <ListItem
-                        component={LinkS}
-                        spy={true}
-                        smooth={true}
-                        to="experience"
-                        className={classes.listItemC}
-                        onClick={handleClose}
-                    >
-                        <ListItemText
-                            primary="Experience"
-                            classes={{ primary: classes.listItemText }}
-                        />
-                    </ListItem>
-                    <ListItem
-                        component={LinkS}
-                        spy={true}
-                        smooth={true}
-                        to="education"
-                        className={classes.listItemC}
-                        onClick={handleClose}
-                    >
-                        <ListItemText
-                            primary="Education"
-                            classes={{ primary: classes.listItemText }}
-                        />
-                    </ListItem>
-                    <ListItem
-                        component={LinkS}
-                        spy={true}
-                        smooth={true}
-                        to="skills"
-                        className={classes.listItemC}
-                        onClick={handleClose}
-                    >
-                        <ListItemText
-                            primary="Skills"
-                            classes={{ primary: classes.listItemText }}
-                        />
-                    </ListItem>
-                    <ListItem
-                        component={LinkS}
-                        spy={true}
-                        smooth={true}
-                        to="interests"
-                        className={classes.listItemC}
-                        onClick={handleClose}
-                    >
-                        <ListItemText
-                            primary="Interests"
-                            classes={{ primary: classes.listItemText }}
-                        />
-                    </ListItem>
                 </List>
             </Grid>
         </Dialog>
